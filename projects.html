@@ -13,8 +13,177 @@
 </head>
 
 <body>
-    <div >
-        <h2>Your-Masterpieces</h2>&nbsp; at Codoc Technologies, Mumbai.(2019)
+    <div style="width : 80%;margin : 0px auto">
+        <h1 style="text-align: center">Your-Masterpieces</h1>
+        <p style="text-align: center">
+
+            &nbsp; at Codoc Technologies, Mumbai.(2019)
+        </p>
+        <h2 style="text-align: center"> Technology :</h2>
+        <p style="text-align: center">
+            Codebase : ReactJS + MobX for state management + webpack + Bulma for some components like cards and modals
+        </p>
+        <h2> Reusable Components: </h2>
+        <p>
+            1. Login Modal
+            <br /> 2. Sign Up modal
+            <br /> 3. Onboarding modals
+            <br /> 4. Artwork Cards
+            <br /> 5. Artist Cards
+            <br /> 6. Artworks/Artists card section
+            <br /> 7. Category Cards and their sections
+            <br /> 8. Extensible filter component
+            <br /> 9. Blog component
+            <br /> 10. Landing page introductory component
+            <br /> 11. Share url Dropdown component
+            <br /> 12. Followers/following users list modal
+            <br /> 13. Error modal
+            <br /> 14. Social Login
+            <br /> 15. Toolbar
+            <br /> 16. Footer
+            <br /> 17. Loader : spinner and progress loader for image upload APIs
+        </p>
+        <h2> Services: </h2>
+        <br /> 1. Agent : This module consists of the configurable API call function. This function can be called from
+        wherever
+        this module is imported by passing the parameters like request name(ex. post, get,etc ), endpoint , body, and a
+        Boolean for the loader display. This function then returns the response body asynchronously after some
+        conventional error handling.
+        <br /> 2. Node server : This server sends build file of the server side rendered project as a response if the
+        request
+        is made from browser. If the request is made from crawler bots , the server redirects those requests to the
+        project which is server side rendered so that they can access meta information in purposes of SEO.
+        <br />3. SSR project : This is a server side rendered project running on a port that the node server directs
+        crawler
+        bot requests to. This project only throws the meta information to those bots for SEO purposes as they can’t be
+        accessed in server side rendered (SPA) project.
+        <h2>Standard features developed:</h2>
+        <p>
+
+            <h3> • Landing page with featured products, artists and categories:</h3>
+            <img style="width : 10%" src="landing-page.png" /><br />
+            Landing page consists of various components : Artists sections, Artworks sections, Blog section, etc.
+            The section components are rendered by passing the props like:<br />
+            <br /> 1. Title of the section
+            <br /> 2. Description of the section
+            <br /> 3. Keyword for View All Button to redirect the user to the list page
+            <br /> 4. isColored: If the background color is white this prop is false
+            <br /> 5. data: the array of the JSON objects for the respective cards.<br />
+            Since the project requirement was to keep this page very dynamic, the sections were made very customizable,
+            reusable and maintainable. Dynamicity is maintained using props.<br />
+            <h3>
+
+                • Email redirected by process: Used for Email verification, reset password. Data with verification token
+                exchanged with the server for authentication purposes.
+            </h3>
+            <h3>
+
+                • product listing with search, filter, pagination.
+            </h3>
+            1. Search results: <br />
+            <img style="width : 10%" src="searched.png" /><br />
+            2. Searched artworks : View All list with page scroll pagination <br />
+            <img style="width : 10%" src="searched-artworks-view-all.png" /><br />
+            3. Searched people : View All list with page scroll pagination <br />
+            <img style="width : 10%" src="searched-artists-view-all.png" /><br />
+            4. Searched Artworks view all list with extensible filter component<br />
+            <img style="width : 10%" src="searched-artworks-filter.PNG" /><br />
+           
+            <h3>• product detailed view :</h3>
+            <span style="font-weight: bold">Actions :</span>
+            <br /> 1. You can send buy requests
+            <br /> 2. Like and dislike the artwork.
+            <br /> 3. Share it to whatsapp, facebook or twitter and also copy the link to clipboard
+            <br /> 4. Report the artwork
+            <br />
+            <img style="width : 10%" src="product_detail.png" /><br />
+            <h3>• Profiles : (auto generated tags on frontend based on profile data and business logic)</h3>
+            1. Own profile <br />
+            <span style="font-weight: bold">Actions :</span>
+            <br /> a. Switch the tabs for artworks section and collection section
+            <br /> b. Redirect to edit profile page
+            <br /> c. Redirect to upload image page
+            <br /> d. Share the profile url to facebook, whatsapp, twitter or copy to clipboard
+            <br /> e. See followers list
+            <br /> f. See following list<br />
+
+
+            <img style="width : 10%" src="profile.png" /><br />
+            2. Other's profile <br />
+            <span style="font-weight: bold">Actions :</span>
+            <br /> a. Switch the tabs for artworks section and collection section
+            <br /> b. Follow/Unfollow the user.
+            <br /> c. Report the profile.
+            <br /> d. Share the profile url to facebook, whatsapp, twitter or copy to clipboard
+            <br /> e. See followers list
+            <br /> f. See following list<br />
+
+
+            <img style="width : 10%" src="artist-profile.png" /><br />
+            <h3>User management : </h3><br />
+            1. Sign in (Along with edge cases handled of old version users including password validation checks and
+            onboarding completion checks)<br />
+            <img style="width : 10%" src="login.png" /><br />
+            3. Sign Up <br />
+            <img style="width : 10%" src="signup.png" /><br />
+            3. Third party logins (Facebook , Google) <br />
+            4.Onboardings (Onboarding-3 made mandatory and can be popped up on any page the user lands on the website if
+            their onboarding is incomplete)<br />
+            <img style="width : 10%" src="edit-profile-onboarding.PNG" />
+            <img style="width : 10%" src="prefered-styles.png" />
+            <img style="width : 10%" src="onboarding-3.png" />
+            <br />
+            <h3>Profile Creation</h3>
+            1. Fetching profile pictures using graph APIs of facebook and Google in case of social logins <br />
+            1. Uploading profile picture image manually with the same work flow as artwork image upload. <br />
+            <img style="width : 10%" src="edit-profile.png" />
+
+
+            <h2> Product CRUD with image crop and resize UI </h2>
+            <span style="font-weight: bold">Actions from user :</span>
+            <br /> 1. Select an image file from the local memory storage. (Or click a picture from the camera if on
+            mobile phone.)
+            <br /> 2. Crop the image as required.
+            <br /> 3. Fill up the form and press upload.<br />
+            <img style="width : 10%" src="upload-crop.PNG" />
+            <img style="width : 10%" src="upload-artwork.png" /><br />
+
+            <br /> <span style="font-weight: bold">Processings done on image :</span>
+            <br /> 1. Validation checks on the cropped image for minimum height and width as per business logic.
+            Rejection of the respective image if not matched the criteria.
+            <br /> 2. In case the cropped image is larger than the maximum limits, resize it to maximum limits
+            maintaining the aspect ratio.
+            <br /> 3. Multiple image upload is possible. the code structure allows to change the maximum upload limit by
+            changing the value of variable max_upload.
+            <br /> 4. The artwork profile is created using only the first image along with the form data which returns
+            the artwork id and the other images are attached to that artwork id to avoid the risks of losing any data.
+            <h2>Extra responsibilities:</h2>
+            <h3>
+                Semi automated deployments including build, nginx configuration, small node service for CSR/SSR
+                switching.
+            </h3>
+            <h2> Examples of implementation approach : </h2>
+            <!-- a. Filter component: Standard checkboxes and dynamic component rendered in filter taken as a prop. -->
+            a. Filter component: <br/>
+            The filter component is configured using an array of the of the JSON objects passed as props if the filters
+            are to be rendered as checkboxes like shown in the above picture.
+
+            <br />To configure the custom filters like pricing and size, functional object returning the required html
+            can be pushed to the configuration array passed as a prop to filter component.<br />
+            <img style="width : 10%" src="searched-artworks-filters-2l.png" />
+            <img style="width : 10%" src="searched-artworks-filters-3.png" /><br />
+            The filter component returns the array of JSON objects with the key value pairs of selected filters to the
+            parent component.
+            
+            <br /> b. SSR based on requesting client being a crawler otherwise CSR-SPA
+            <br /> c. Responsive design in the entire project   <br />
+            <img style="width : 10%" src="mobile-landing-page.png" />
+            <img style="width : 10%" src="mobile-artist-detail.png" />
+            <img style="width : 10%" src="mobile-artwork-page.png" />
+
+
+
+        </p>
         <h2>Ciliac-Project</h2>&nbsp;(2019)
     </div>
 </body>
