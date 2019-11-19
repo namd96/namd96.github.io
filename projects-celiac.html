@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Projects</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src='main.js' type="module"></script>
+</head>
+
+<body style="background-color: #f5f5f5;">
+    <div style="width : 80%;margin : 0px auto">
+        <h1 style="text-align: center">Celiac</h1>
+        <p style="text-align: center">
+
+            &nbsp; (2019)<br />
+            The intent behind this project was to provide celiac patient community with a platform to maintain and
+            track a list of products about their gluten content that everyone can refer to.
+            This is still an academic project so there is no branding done yet and I have kept the styling and
+            appearance to very minimalistic.
+
+        </p>
+        <h2 style="text-align: center">Current Scope :</h2>
+        <p>
+            • Auth : Login and register
+            <br />• Create a product form: If the user has information about gluten content of a product,
+            they can add that product with an upvote (it's gluten free) or downvote (it contains gluten).
+            <br /> • Enquire about a product form: If a user has query about gluten content of a product,
+            they can add a query about that product.
+            <br />• Vote for a product: While browsing through the list, users can vote the existing products with an
+            upvote
+            (it's gluten free) or downvote (it contains gluten) so the popular opinion is recorded.
+            <br />• Search For a product: Users can search for a specific product.
+            <br />• Resolve the queries: Users can resolve the queries with an initial upvote or downvote. It just adds
+            that
+            product in the product list and gets removed from the queries list.
+            <br />• Product details page.
+            <br />• Add and view comments about a product.
+            <br />• Raise a concern about a product.
+        </p>
+        <h2 style="text-align: center">Future Scope :</h2>
+        <p>
+            <br />• Apply filters on products.
+            <br />• User roles based admin system to create company/brand lists, resolve queries and add products.
+            <br />• Profile details page.
+            <br />• Pagination.
+            <br />• Rate/Report profiles.
+
+        </p>
+        <h2 style="text-align: center"> Technology :</h2>
+        <p style="text-align: center; font-size : 18px;font-weight: 500">
+            Codebase : <br />
+            &nbsp; Front-end : ReactJS + hooks + context api + webpack + react-bootstrap <br />
+            &nbsp; back-end : nodeJS + expressJS + JWT + sql
+        </p>
+        <h2> Reusable Components: </h2>
+        <p>
+            * Front-end :
+            <br /> &nbsp; 1. Login
+            <br /> &nbsp; 2. Sign Up
+            <br /> &nbsp; 3. Product cards for mobile view
+            <br /> &nbsp; 4. Create a product form
+            <br /> &nbsp; 5. Enquire about a product form
+            <br /> &nbsp; 6. Smart search input box :
+                This search input box hits the request only when the user stops typing. The waiting duration is passed through props.
+            <br /> &nbsp; 7. Toolbar
+
+
+        </p>
+        <h2> Services: </h2>
+        * Front-end : <br />
+
+        <br /> 1. Agent : This module consists of the configurable API call function. This function can be called from
+        wherever
+        this module is imported by passing the parameters like request name(ex. post, get,etc ), endpoint , body, and a
+        Boolean for the loader display. This function then returns the response body asynchronously after some
+        conventional error handling.
+        <br /> 2. Node server : This server sends build file of the server side rendered project as a response if the
+        request
+        is made from browser. If the request is made from crawler bots , the server redirects those requests to the
+        project which is server side rendered so that they can access meta information in purposes of SEO.
+        <br />3. Backend node server : This is a typical backend server enabling client to communicate with the database
+        and handle other jobs such as JWT, email sending, etc.
+        Authenticator service authenticates the users , creates and decodes JWT to maintain login sessions.
+        Validator Service validates users using policies that I defined. This is mainly to define permissions for user
+        roles.
+        <h2>Standard features developed:</h2>
+        <p>
+
+            <h3> • Register:</h3>
+            <img style="width : 10%" src="images/celiac-images/register-desktop.png" /> <a href="images/celiac-images/register-desktop.png" target="_blank">Open in new tab</a><br />
+            <p>Register API adds users to the database.</p>
+            <h3> • Login:</h3>
+            <img style="width : 10%" src="images/celiac-images/login-desktop.png" /> <a href="images/celiac-images/login-desktop.png" target="_blank">Open in new tab</a><br />
+            <p>Login API creates a JWT that expires after 2hours.</p>
+            <h3> • Product List:</h3>
+            <img style="width : 10%" src="images/celiac-images/product-listing.png" /> <a href="images/celiac-images/product-listing.png" target="_blank">Open in new tab</a><br />
+            <p>A bootstrap table to show all the products along with gluten content and other data.
+                <br /> <span style="font-weight: bold">Actions :</span>
+                <br /> a. Upvote/downvote for the product's gluten content
+                <br /> b. Navigate to product details page.
+
+            </p>
+            <h3> • Product details page:</h3>
+            <img style="width : 10%" src="images/celiac-images/product-details.png" /> <a href="images/celiac-images/product-details.png" target="_blank">Open in new tab</a>
+            <img style="width : 10%" src="images/celiac-images/concern-modal.png" /> <a href="images/celiac-images/concern-modal.png" target="_blank">Open in new tab</a><br />
+            <p>This page has detailed information about the products.
+                <br /> <span style="font-weight: bold">Actions :</span>
+                <br /> a. Upvote/downvote for the product's gluten content
+                <br /> b. Add comments and see comments
+                <br /> c. Raise concerns about the product.
+            </p>
+            <h3> • Queries page:</h3>
+            <img style="width : 10%" src="images/celiac-images/queries.png" /> <a href="images/celiac-images/queries.png" target="_blank">Open in new tab</a>  <br />
+            <p>This page has detailed information about the queries.
+                <br /> <span style="font-weight: bold">Actions :</span>
+                <br /> a. Resolve the queries : 
+                Resolving the query add that product to product list with the initial vote that resolver gives and deletes that product from query list. 
+            </p>
+            <h3> • Mobile responsive:</h3>
+            <img style="width : 10%" src="images/celiac-images/product-listing-mobile.png" /> <a href="images/celiac-images/product-listing-mobile.png" target="_blank">Open in new tab</a>  <br />
+            <p>This is how the product details page is rendered in mobile. As the table seemed full of clutter in small screens I went for card view.
+               
+            </p>
+    </div>
+</body>
+
+</html>)
