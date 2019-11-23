@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Projects</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src='main.js' type="module"></script>
+</head>
+
+<body style="background-color: #f5f5f5;">
+    <div style="width : 80%;margin : 0px auto">
+        <h1 style="text-align: center">Celiac</h1>
+        <p style="text-align: center">
+
+            &nbsp; (2019)<br />
+            The intent behind this project was to provide a platform to sell and buy services and products in Mumbai.
+            This plarform in being made to be suitable for small home industries to sell their products. Also the
+            services like domestic help, salon can be offerred on platform. There are no technical restrictions as to
+            what kind of
+            services can be offered on this platform. Although, super admins can restrict them as per their business
+            logic.
+            This is still an academic project so there is no branding done yet and I have kept the styling and
+            appearance to very minimalistic.
+
+        </p>
+        <h2 style="text-align: center">Current Scope :</h2>
+        <p>
+            • Auth : Login and register :
+            There are three types of user logins -
+            <br /> 1. Customer : Customers can login, register, logout, browse through products and services, search
+            them, chat with vendor
+
+
+            <br /> 2. Vendor : Vendors can associate their services to one of the services that are offered by this
+            platform, add sub-services to those sevrices, add menus to the sub services, create products, chat with
+            customers, make the services/sub services/menu items active and inactive
+            <br /> 3. Super admin : Super admin can create the master list of services that can be offered on platform
+            which vendors can associate their services with, they can add master categories for the products/services,
+            etc. Basically, superadmin can take care of the master data management.
+
+        </p>
+        <h2 style="text-align: center">Future Scope :</h2>
+        <p>
+            <br />• Customer : Customers in the future can apply filters on the products, can send address cards,
+            product/service cards through chat to vendor, track the orders they placed.
+            <br />•Vendor : Vendors in the future can send menu cards, product/service cards through chat, add products,
+            manage and track the received orders, etc
+
+        </p>
+        <h2 style="text-align: center"> Technology :</h2>
+        <p style="text-align: center; font-size : 18px;font-weight: 500">
+            Codebase : <br />
+            &nbsp; Front-end : ReactJS + hooks + context api + webpack + react-bootstrap <br />
+            &nbsp; back-end : nodeJS + expressJS + JWT + sql
+        </p>
+        <h2> Reusable Components: </h2>
+        <p>
+            * Front-end :
+            <br /> &nbsp; 1. Login
+            <br /> &nbsp; 2. Sign Up
+            <br /> &nbsp; 3. Product cards for mobile view
+            <br /> &nbsp; 4. Chat component
+            <br /> &nbsp; 5. Smart search input box :
+            This search input box hits the request only when the user stops typing. The waiting duration is passed
+            through props.
+            <br /> &nbsp; 6. Toolbar
+
+
+        </p>
+        <h2> Services: </h2>
+        * Front-end : <br />
+
+        <br /> 1. Agent : This module consists of the configurable API call function. This function can be called from
+        wherever
+        this module is imported by passing the parameters like request name(ex. post, get,etc ), endpoint , body, and a
+        Boolean for the loader display. This function then returns the response body asynchronously after some
+        conventional error handling.
+        <br /> 2. Node server : This server sends build file of the server side rendered project as a response.
+        <br />3. Backend node server : This is a typical backend server enabling client to communicate with the database
+        and handle other jobs such as JWT, email sending, etc.
+        Authenticator service authenticates the users , creates and decodes JWT to maintain login sessions.
+        Validator Service validates users using policies that I defined. This is mainly to define permissions for user
+        roles.
+        <h2>Standard features developed:</h2>
+        Home page
+        <br />
+        <img style="width : 10%" src="images/m-essentials/home.png" /> <a href="images/m-essentials/home.png"
+            target="_blank">Open in new tab</a><br />
+        Conversation box:
+        <br />
+        <img style="width : 10%" src="images/m-essentials/conversation-box-inactive.PNG" /> <a
+            href="images/m-essentials/conversation-box-inactive.PNG" target="_blank">Open in new tab</a>
+        <img style="width : 10%" src="images/m-essentials/conversation-box.PNG" /> <a
+            href="images/m-essentials/conversation-box.PNG" target="_blank">Open in new tab</a>
+        <br />
+        Product details page
+        <br />
+        <img style="width : 10%" src="images/m-essentials/product-details.png" /> <a href="images/m-essentials/home.png"
+            target="_blank">Open in new tab</a><br />
+        <br />
+
+        <h3 style="color : gray;font-weight: 600">Documentation and development still in progress, development can be
+            tracked on my github <a href="https://github.com/namd96" target="_blank">account</a> </h3>
+        <!-- <p> -->
+
+        <!-- <h3> • Register:</h3>
+            <img style="width : 10%" src="images/m-essentials/" /> <a
+                href="images/celiac-images/register-desktop.png" target="_blank">Open in new tab</a><br />
+            <p>Register API adds users to the database.</p>
+            <h3> • Login:</h3>
+            <img style="width : 10%" src="images/celiac-images/login-desktop.png" /> <a
+                href="images/celiac-images/login-desktop.png" target="_blank">Open in new tab</a><br />
+            <p>Login API creates a JWT that expires after 2hours.</p>
+            <h3> • Product List:</h3>
+            <img style="width : 10%" src="images/celiac-images/product-listing.png" /> <a
+                href="images/celiac-images/product-listing.png" target="_blank">Open in new tab</a><br />
+            <p>A bootstrap table to show all the products along with gluten content and other data.
+                <br /> <span style="font-weight: bold">Actions :</span>
+                <br /> a. Upvote/downvote for the product's gluten content
+                <br /> b. Navigate to product details page.
+
+            </p>
+            <h3> • Product details page:</h3>
+            <img style="width : 10%" src="images/celiac-images/product-details.png" /> <a
+                href="images/celiac-images/product-details.png" target="_blank">Open in new tab</a>
+            <img style="width : 10%" src="images/celiac-images/concern-modal.png" /> <a
+                href="images/celiac-images/concern-modal.png" target="_blank">Open in new tab</a><br />
+            <p>This page has detailed information about the products.
+                <br /> <span style="font-weight: bold">Actions :</span>
+                <br /> a. Upvote/downvote for the product's gluten content
+                <br /> b. Add comments and see comments
+                <br /> c. Raise concerns about the product.
+            </p>
+            <h3> • Queries page:</h3>
+            <img style="width : 10%" src="images/celiac-images/queries.png" /> <a
+                href="images/celiac-images/queries.png" target="_blank">Open in new tab</a> <br />
+            <p>This page has detailed information about the queries.
+                <br /> <span style="font-weight: bold">Actions :</span>
+                <br /> a. Resolve the queries :
+                Resolving the query add that product to product list with the initial vote that resolver gives and
+                deletes that product from query list.
+            </p>
+            <h3> • Mobile responsive:</h3>
+            <img style="width : 10%" src="images/celiac-images/product-listing-mobile.png" /> <a
+                href="images/celiac-images/product-listing-mobile.png" target="_blank">Open in new tab</a> <br />
+            <p>This is how the product details page is rendered in mobile. As the table seemed full of clutter in small
+                screens I went for card view.
+
+            </p> -->
+    </div>
+</body>
+
+</html>)
